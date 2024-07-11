@@ -1,0 +1,30 @@
+[
+	{
+		"name": "8Bitdo Retro Mechanical Keyboard",
+		"imageUrl": "https://m.media-amazon.com/images/I/61zQatjqsPL._AC_SL1500_.jpg",
+		"price": 85,
+		"details": "Inspired by the classics. Programmable keys, Dual Super Buttons, and Super Stick, with independent control panel.",
+		"id": "1"
+	},
+	{
+		"name": "Womier M84 75% Wireless/Wired Mechanical Keyboard",
+		"imageUrl": "https://m.media-amazon.com/images/I/71jAUlz7KPL._AC_SL1500_.jpg",
+		"price": 59,
+		"details": "【Coral Sea Theme Ergonomic Keyboard】Womier new 75% layout mechanical keyboard in fusing art and modern technology as one, showing the coral sea pattern in 360 degrees.",
+		"id": "2"
+	},
+	{
+		"name": "Keychron Q1 Max RGB QMK/VIA Custom Mechanical Keyboard",
+		"imageUrl": "https://m.media-amazon.com/images/I/61zQ2umtPcL._AC_SL1500_.jpg",
+		"price": 229,
+		"details": "Keychron Q1 Max, a custom wireless mechanical keyboard. Features a full metal body, a 2.4 GHz and Bluetooth wireless connection, QMK/VIA key remapping, a 1000 Hz polling rate, double-gasket design, PBT keycaps, screw-in stabilizers, and more premium features. ",
+		"id": "3"
+	},
+	{
+		"name": "EPOMAKER TH80 Pro 75% Hot Swap RGB 2.4Ghz/Bluetooth 5.0/Wired Gaming Keyboard",
+		"imageUrl": "https://m.media-amazon.com/images/I/61d4la0LejL._AC_SL1500_.jpg",
+		"price": 89,
+		"details": "【75% Compact Layout Gaming Keyboard】The EPOMAKER TH80 PRO is a high-performance mechanical gaming keyboard that offers exceptional features and customization options. Designed with ergonomics in mind, with its 75% compact design, it saves valuable desk space without compromising on functionality. this compact keyboard ensures a comfortable typing and gaming experience for hours on end.  ",
+		"id": "4"
+	}
+]
