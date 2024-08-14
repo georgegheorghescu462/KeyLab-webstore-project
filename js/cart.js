@@ -18,13 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			productCard.className = 'flex justify-between items-center w-700';
 			const disabled = product.quantity === 1 ? 'disabled' : '';
 			productCard.innerHTML = `
-			<img width="50px" src="${product.imageUrl}"/>
+			<a href="../pages/details.html?id=${product.id}"><img width="50px" src="${
+				product.imageUrl
+			}"/></a>
             <div class="flex gap-20 w-400 h-40 justify-between items-center">
 				<span>${product.name}</span>				
             	<div class="flex gap-10">
               		<button ${disabled} data-id="${id}" class="decrease">-</button>
                		<span>${product.quantity}</span>
-               		<button data-id="${id}" class="increase">+</button>
+               		<button data-id="${id}" ${
+				Number(product.stock) <= product.quantity ? 'disabled' : ''
+			} class="increase">+</button>
            		</div>
 			</div>
 			<span>$${product.price * product.quantity}</span>

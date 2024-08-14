@@ -3,9 +3,9 @@
 
 :root {
 	--primary-bg-color: #ecceae;
+	--secondary-bg-color: #fbf6e2;
 	--primary-text-color: #131842;
 	--secondary-color: #e68369;
-	/* #FBF6E2 */
 }
 
 * {
@@ -104,4 +104,55 @@ body {
 	padding: 15px 10px;
 	border: 2px solid var(--primary-text-color);
 	border-radius: 10px;
+}
+
+.product-card button {
+	padding: 5px;
+	border: none;
+	background: none;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+#error-message {
+	color: red;
+	display: none;
+	font-weight: 800;
+}
+
+.image-section {
+	width: 35%;
+	position: relative;
+}
+
+.image-section img {
+	width: 100%;
+	position: absolute;
+	left: 20%;
+	top: 50px;
+	border: 2px solid var(--primary-text-color);
+	border-radius: 5px;
+}
+
+.cart-section {
+	width: 50%;
+	margin-top: 60px;
+	color: var(--primary-text-color);
+}
+
+.cart-section h3 {
+	align-items: center;
+}
+
+.cart-section button {
+	width: auto;
+	margin-left: 33%;
+	margin-right: 33%;
+	background-color: var(--secondary-color);
+	border-radius: 5px;
+}
+
+.details-section {
+	padding: 30px;
+	margin-top: 25%;
 }

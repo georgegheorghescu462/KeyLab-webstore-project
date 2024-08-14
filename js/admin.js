@@ -36,6 +36,24 @@ let currentEditableProductId;
 const saveProductButton = document.getElementById('save-btn');
 saveProductButton.addEventListener('click', saveProduct);
 
+function validateForm(product) {
+	const errorMessage = document.getElementById('error-message');
+
+	if (
+		product.name !== '' &&
+		product.price !== 0 &&
+		product.imageUrl !== '' &&
+		product.details !== ''
+	) {
+		errorMessage.style.display = 'none';
+		return true;
+	} else {
+		errorMessage.style.display = 'flex';
+		errorMessage.innerHTML = `<i class="fa-solid fa-triangle-exclamation fa-shake"></i>Please fill out all fields`;
+		return false;
+	}
+}
+
 async function saveProduct(event) {
 	event.preventDefault();
 
@@ -46,21 +64,23 @@ async function saveProduct(event) {
 		details: detailsInput.value,
 	};
 
-	if (editMode) {
-		const editedProduct = await updateProduct(
-			product,
-			currentEditableProductId
-		);
-		if (editedProduct !== null) {
-			form.reset();
-			displayAllProducts();
-			editMode = false;
-		}
-	} else {
-		const createdProduct = await addNewProduct(product);
-		if (createdProduct !== null) {
-			form.reset();
-			displayAllProducts();
+	if (validateForm(product)) {
+		if (editMode) {
+			const editedProduct = await updateProduct(
+				product,
+				currentEditableProductId
+			);
+			if (editedProduct !== null) {
+				form.reset();
+				displayAllProducts();
+				editMode = false;
+			}
+		} else {
+			const createdProduct = await addNewProduct(product);
+			if (createdProduct !== null) {
+				form.reset();
+				displayAllProducts();
+			}
 		}
 	}
 }

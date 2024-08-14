@@ -18,16 +18,23 @@ async function displayAllProducts() {
 			const name = button.getAttribute('data-name');
 			const price = button.getAttribute('data-price');
 			const imageUrl = button.getAttribute('data-image');
+			const stock = button.getAttribute('data-stock');
 
 			let cart = JSON.parse(localStorage.getItem('cart')) || {};
 			if (cart[productId]) {
-				cart[productId].quantity++;
+				if (cart[productId].quantity < Number(stock)) {
+					cart[productId].quantity++;
+				} else {
+					button.disabled = true;
+				}
 			} else {
 				cart[productId] = {
 					quantity: 1,
 					name: name,
 					price: price,
 					imageUrl: imageUrl,
+					id: productId,
+					stock: stock,
 				};
 			}
 
