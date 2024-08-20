@@ -10,12 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		let total = 0;
 
 		for (let id in cart) {
-			// const product = await getProductById(id);
-			// product.quantity = cart[id].quantity;
 			const product = cart[id];
 
 			const productCard = document.createElement('div');
-			productCard.className = 'flex justify-between items-center w-700';
+			productCard.className =
+				'flex justify-between items-center w-700 cart-item';
 			const disabled = product.quantity === 1 ? 'disabled' : '';
 			productCard.innerHTML = `
 			<a href="../pages/details.html?id=${product.id}"><img width="50px" src="${

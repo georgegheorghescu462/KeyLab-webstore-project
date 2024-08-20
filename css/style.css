@@ -114,6 +114,43 @@ body {
 	cursor: pointer;
 }
 
+.product-card img {
+	border: 1px solid var(--primary-text-color);
+	border-radius: 10px;
+}
+
+.cart-container {
+	margin: 15px;
+	padding: 3%;
+	border: 2px solid var(--primary-text-color);
+	border-radius: 5px;
+	justify-content: center;
+}
+
+.decrease,
+.increase,
+.delete {
+	border: none;
+	background-color: transparent;
+	font-size: 16px;
+	font-weight: 800;
+	cursor: pointer;
+}
+
+.cart-item {
+	border-bottom: 1px solid;
+	padding: 5px;
+}
+
+.cart-items {
+	gap: 10px;
+}
+
+.cart-total {
+	margin-top: 20px;
+	font-weight: 800;
+}
+
 #error-message {
 	color: red;
 	display: none;
